@@ -1,0 +1,1 @@
+<?php// SEND HTTP HEADERS$header_info = "Content-type: image/".$ext."\n";$header_info .= "Content-Length: ".(filesize($name) + 1)."\n";$offset = 60 * 60 * 24 * $exp;$header_info .= "Expires: ";$header_info .= gmdate("D, d M Y H:i:s", time() + $offset)." GMT";header($header_info);// READ FILEreadfile($name);?>
